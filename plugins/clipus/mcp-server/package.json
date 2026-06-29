@@ -1,0 +1,22 @@
+{
+  "name": "clipus-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": { "clipus-mcp": "dist/index.js" },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "bundle": "esbuild src/index.ts --bundle --platform=node --format=esm --target=node20 --outfile=dist/index.js",
+    "build": "pnpm typecheck && pnpm bundle",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
