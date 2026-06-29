@@ -1,0 +1,12 @@
+{
+  "name": "clipus",
+  "owner": { "name": "Clipus", "email": "support@clipus.io" },
+  "plugins": [
+    {
+      "name": "clipus",
+      "displayName": "Clipus — Autonomous Marketing Agent",
+      "source": "./plugins/clipus",
+      "description": "Turn any SaaS site into shortform video marketing. Free: Surface reports, shortform scripts, landing copy. Connected: render real multilingual videos via your Clipus account."
+    }
+  ]
+}

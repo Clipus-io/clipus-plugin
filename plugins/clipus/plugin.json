@@ -1,0 +1,6 @@
+{
+  "name": "clipus",
+  "description": "Autonomous Marketing Agent for SaaS — analyze a product site and generate shortform video scripts, landing copy, and real rendered campaigns.",
+  "version": "0.1.0",
+  "author": { "name": "Clipus", "email": "support@clipus.io" }
+}
