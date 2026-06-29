@@ -76,7 +76,7 @@ async function request(cfg: ClipusConfig, path: string, init: RequestInit): Prom
     resp = await fetch(`${cfg.baseUrl}${path}`, {
       ...init,
       signal: controller.signal,
-      headers: { "content-type": "application/json", "x-api-key": cfg.apiKey, ...(init.headers || {}) },
+      headers: { ...(init.headers || {}), "content-type": "application/json", "x-api-key": cfg.apiKey },
     });
   } catch (err) {
     clearTimeout(timer);

@@ -71,3 +71,28 @@ describe("getCampaign", () => {
     await expect(getCampaign(cfg, "nope")).rejects.toMatchObject({ status: 404 });
   });
 });
+
+describe("request error paths", () => {
+  it("maps an aborted (timeout) request to status 408", async () => {
+    // fetch that rejects with an AbortError, simulating the AbortController firing
+    vi.stubGlobal("fetch", vi.fn(async () => {
+      const e = new Error("aborted");
+      e.name = "AbortError";
+      throw e;
+    }));
+    await expect(createCampaign(cfg, { url: "https://acme.io" })).rejects.toMatchObject({
+      status: 408,
+      userMessage: expect.stringContaining("dashboard"),
+    });
+  });
+
+  it("maps a network failure to status 0", async () => {
+    vi.stubGlobal("fetch", vi.fn(async () => {
+      throw new TypeError("fetch failed");
+    }));
+    await expect(getCampaign(cfg, "proj-1")).rejects.toMatchObject({
+      status: 0,
+      userMessage: expect.stringContaining("network"),
+    });
+  });
+});
