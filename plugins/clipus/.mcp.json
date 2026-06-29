@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "clipus": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/mcp-server/dist/index.js"],
+      "env": {
+        "CLIPUS_API_KEY": "${CLIPUS_API_KEY}",
+        "CLIPUS_BASE_URL": "${CLIPUS_BASE_URL}"
+      }
+    }
+  }
+}
