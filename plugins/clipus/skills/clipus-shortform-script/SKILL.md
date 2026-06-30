@@ -1,6 +1,6 @@
 ---
 name: clipus-shortform-script
-description: Use when turning a SaaS product (a URL, landing page, or DOM/feature description) into a punchy B2B shortform video script with hook options. Triggers on "shortform script", "video hook", "TikTok/Reels/Shorts script for my SaaS".
+description: Generate a B2B shortform video script and hook options for a SaaS product, grounded in the real product. Use when turning a SaaS URL, landing page, or product description into a TikTok, Reels, or Shorts script with hook options. Triggers on shortform script, video hook, TikTok script, Reels script, Shorts script for a SaaS product.
 ---
 
 # Clipus Shortform Script
