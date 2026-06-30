@@ -1,5 +1,5 @@
 ---
-name: clipus-saas-copy
+name: saas-copy
 description: Write or improve landing and marketing copy for a SaaS product — headlines, subheads, feature blurbs, and CTAs — grounded in real product capability. Use when the user asks to write landing copy, headline help, rewrite this hero, marketing copy for a SaaS product, or improve a hero section.
 ---
 
